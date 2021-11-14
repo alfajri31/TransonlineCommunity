@@ -1,0 +1,23 @@
+{
+  "name": "transonline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-sass": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 stylesheet/scss/main.scss stylesheet/Styles.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfajri31/Transonline.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alfajri31/Transonline/issues"
+  },
+  "homepage": "https://github.com/alfajri31/Transonline#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

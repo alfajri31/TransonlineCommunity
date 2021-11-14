@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "Styles.css",
+	"sources": [
+		"scss/main.scss"
+	],
+	"sourcesContent": [
+		"﻿.fzr-custom-none {\r\n    display:none;\r\n}\r\n\r\n.custom-loading-login-normal {\r\n    background: rgba( 255, 255, 255, .8 ) url('http://i.stack.imgur.com/FhHRx.gif') no-repeat;\r\n    height: 2rem;\r\n    margin-top: 1rem;\r\n}\r\n\r\n.custom-bg-orange {\r\n    background-color: darkorange;\r\n}\r\n\r\n.custom-navbar-toggler-icon {\r\n    display: block;\r\n    width: 25px;\r\n    height: 3px;\r\n    background-color: white;\r\n    margin: 5px;\r\n}\r\n\r\n.navbar-toggler {\r\n    border: none;\r\n\r\n    &:focus {\r\n       box-shadow: none;\r\n    }\r\n}\r\n\r\n.navbar-toggler:hover {\r\n    cursor: pointer;\r\n}\r\n.navbar-toggler:active {\r\n\r\n    & .custom-navbar-toggler-icon:nth-child(1) {\r\n        background-color: white;\r\n        transform: translateY(8px) rotate(45deg);\r\n    }\r\n\r\n    & .custom-navbar-toggler-icon:nth-child(2) {\r\n        opacity: 0;\r\n    }\r\n\r\n    & .custom-navbar-toggler-icon:nth-child(3) {\r\n        background-color: white;\r\n        transform: translateY(-8px) rotate(-45deg);\r\n    }\r\n}\r\n\r\n.custom-flex-container {\r\n    width: 50px;\r\n    height: 50px;\r\n}\r\n\r\n\r\n"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,gBAAgB,CAAC;EACb,OAAO,EAAC,IAAI;CACf;;AAED,AAAA,4BAA4B,CAAC;EACzB,UAAU,EAAE,wBAAyB,CAAC,yCAAyC,CAAC,SAAS;EACzF,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,IAAI;CACnB;;AAED,AAAA,iBAAiB,CAAC;EACd,gBAAgB,EAAE,UAAU;CAC/B;;AAED,AAAA,2BAA2B,CAAC;EACxB,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,GAAG;EACX,gBAAgB,EAAE,KAAK;EACvB,MAAM,EAAE,GAAG;CACd;;AAED,AAAA,eAAe,CAAC;EACZ,MAAM,EAAE,IAAI;CAKf;;AAND,AAGI,eAHW,AAGV,MAAM,CAAC;EACL,UAAU,EAAE,IAAI;CAClB;;AAGL,AAAA,eAAe,AAAA,MAAM,CAAC;EAClB,MAAM,EAAE,OAAO;CAClB;;AACD,AAEI,eAFW,AAAA,OAAO,CAEhB,2BAA2B,AAAA,UAAW,CAAA,CAAC,EAAE;EACvC,gBAAgB,EAAE,KAAK;EACvB,SAAS,EAAE,eAAe,CAAC,aAAa;CAC3C;;AALL,AAOI,eAPW,AAAA,OAAO,CAOhB,2BAA2B,AAAA,UAAW,CAAA,CAAC,EAAE;EACvC,OAAO,EAAE,CAAC;CACb;;AATL,AAWI,eAXW,AAAA,OAAO,CAWhB,2BAA2B,AAAA,UAAW,CAAA,CAAC,EAAE;EACvC,gBAAgB,EAAE,KAAK;EACvB,SAAS,EAAE,gBAAgB,CAAC,cAAc;CAC7C;;AAGL,AAAA,sBAAsB,CAAC;EACnB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;CACf"
+}

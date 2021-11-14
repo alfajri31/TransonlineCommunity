@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+    <html>
+    <head>
+
+    </head>
+    <body>
+       @using (Html.BeginForm())
+       {
+        
+            @*<div class="row">
+                <div class="col-sm-2 bg-danger">
+                    One of three columns
+                </div>
+                <div class="col-sm-2 bg-warning">
+                    One of three columns
+                </div>
+                <div class="col-sm-8 bg-primary">
+                    One of three columns
+                </div>
+            </div>*@
+        
+        <nav class="navbar navbar-expand-lg navbar-light custom-bg-orange">
+            <div class="row">
+                <div class="fzr-custom-none">
+                    <div class="container-fluid bg-dark fixed-top bg-opacity-25 vh-100 mx-0 col-sm-6">
+                        <div class="flex-column">
+                            <div class="custom-flex-container">
+                                TEST1
+                            </div>
+                            <div class="custom-flex-container">
+                                TEST2
+                            </div>
+                            <div class="custom-flex-container">
+                                TEST3
+                            </div>
+                            <div class="custom-flex-container">
+                                <span id="btnLogout">Logout</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+
+            @*<button id="button-login">Login</button>
+            <div id="tete">TEST</div>*@
+
+            <div class="container-fluid">
+            <a class="navbar-brand text-light px-2" href="#">transonline</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsupportedcontent" aria-controls="navbarsupportedcontent" aria-expanded="false" aria-label="toggle navigation">
+                <span class="custom-navbar-toggler-icon"></span>
+                <span class="custom-navbar-toggler-icon"></span>
+                <span class="custom-navbar-toggler-icon"></span>
+            </button>
+        </div>
+        </nav>
+        }
+
+
+        <script>
+
+            var button = document.querySelector('button');
+            button.onclick = function () {
+                $(".fzr-custom-none").css({ "display": "block"});
+            }
+
+            var button = document.querySelector('#btnLogout');
+            button.onclick = function () {
+                $.ajax({
+                    type: "POST", //HTTP POST Method
+                    url: "/Logout",
+                    success: function () {
+                        window.location = "/LoginAdministrator";
+                    }
+                })
+            }
+
+          
+        </script>
+    </body>
+
+
+    </html>
+
+

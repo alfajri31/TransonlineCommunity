@@ -1,0 +1,19 @@
+﻿@inject IJSRuntime JsRuntime;
+
+<h3>PageTitle</h3>
+
+@code {
+    [Parameter]
+    public string Title { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await SetTitle();
+    }
+
+
+    private async Task SetTitle()
+    {
+        await JsRuntime.InvokeVoidAsync("setTitle", Title);
+    }
+}
