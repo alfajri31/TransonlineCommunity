@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AdAspNetProvider, Version=6.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AdAspNetProvider.6.1.0\lib\net40\AdAspNetProvider.dll</HintPath>
+    </Reference>
     <Reference Include="AjaxMin, Version=5.14.5506.26196, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
       <HintPath>..\packages\AjaxMin.5.14.5506.26202\lib\net40\AjaxMin.dll</HintPath>
     </Reference>
@@ -249,6 +252,14 @@
     <Compile Include="Migrations\202111061603175_AddUsernameAsPKRegistration.Designer.cs">
       <DependentUpon>202111061603175_AddUsernameAsPKRegistration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111141313424_UserRoleMapping.cs" />
+    <Compile Include="Migrations\202111141313424_UserRoleMapping.Designer.cs">
+      <DependentUpon>202111141313424_UserRoleMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111141333445_UserRoleMappingLazyLoading.cs" />
+    <Compile Include="Migrations\202111141333445_UserRoleMappingLazyLoading.Designer.cs">
+      <DependentUpon>202111141333445_UserRoleMappingLazyLoading.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Authentication\Api\LoginApi.cs" />
     <Compile Include="Models\Authentication\Dto\LoginDto.cs" />
@@ -256,10 +267,14 @@
     <Compile Include="Models\Authentication\Dto\RegistrationDto.cs" />
     <Compile Include="Models\Authentication\Role.cs" />
     <Compile Include="Models\Authentication\User.cs" />
+    <Compile Include="Models\Authentication\UserRoleMapping.cs" />
     <Compile Include="Models\Authentication\UserRoles.cs" />
     <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CustomAuthorization.cs" />
+    <Compile Include="Services\BasicAuthentication.cs" />
+    <Compile Include="Services\MyAuthorizeAttributeWebApi.cs" />
+    <Compile Include="Services\UserRoleProviderMVC.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -362,6 +377,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111061603175_AddUsernameAsPKRegistration.resx">
       <DependentUpon>202111061603175_AddUsernameAsPKRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111141313424_UserRoleMapping.resx">
+      <DependentUpon>202111141313424_UserRoleMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111141333445_UserRoleMappingLazyLoading.resx">
+      <DependentUpon>202111141333445_UserRoleMappingLazyLoading.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

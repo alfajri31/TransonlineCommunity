@@ -6,8 +6,9 @@ using System.Web.Mvc;
 
 namespace Transonline.Services
 {
-    public class CustomAuthorization : AuthorizeAttribute
+    public class CustomAuthorization : AuthorizeAttribute 
     {
+
         protected override bool AuthorizeCore(HttpContextBase httpContext)
         {
             if (httpContext.Session["FriendlyEmail"] == null)

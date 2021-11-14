@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AwesomeApp.Views.NotesPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Editor x:Name="editor" Placeholder="Enter your note" HeightRequest="70"></Editor>
+            <Grid ColumnDefinitions="*,*,*">
+                <Button Text="Save" Clicked="OnSaveButtonClicked"></Button>
+                <Button Grid.Column="1" Text="Delete" Clicked=""></Button>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

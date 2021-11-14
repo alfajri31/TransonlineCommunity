@@ -1,0 +1,82 @@
+﻿<!--<?xml version="1.0" encoding="utf-8" ?>
+<contentpage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:class="awesomeapp.views.aboutpage"
+             xmlns:vm="clr-namespace:awesomeapp.viewmodels"
+             title="{binding title}">
+    
+    <contentpage.bindingcontext>
+        <vm:aboutviewmodel />
+    </contentpage.bindingcontext>
+    
+    <contentpage.resources>
+        <resourcedictionary>
+            <color x:key="accent">#96d1ff</color>
+        </resourcedictionary>
+    </contentpage.resources>
+
+    <grid>
+        <grid.rowdefinitions>
+            <rowdefinition height="auto" />
+            <rowdefinition height="*" />
+        </grid.rowdefinitions>
+        <stacklayout backgroundcolor="{staticresource accent}" verticaloptions="fillandexpand" horizontaloptions="fill">
+            <stacklayout orientation="horizontal" horizontaloptions="center" verticaloptions="center">
+                <contentview padding="0,40,0,40" verticaloptions="fillandexpand">
+                    <image source="xamarin_logo.png" verticaloptions="center" heightrequest="64" />
+                </contentview>
+            </stacklayout>
+        </stacklayout>
+        <scrollview grid.row="1">
+            <stacklayout orientation="vertical" padding="30,24,30,24" spacing="10">
+                <label textcolor="#77d065" text="start developing now" fontsize="title"/>
+                <label text="make changes to your xaml file and save to see your ui update in the running app with xaml hot reload. give it a try!" fontsize="16" padding="0,0,0,0"/>
+                <label fontsize="16" padding="0,24,0,0">
+                    <label.formattedtext>
+                        <formattedstring>
+                            <formattedstring.spans>
+                                <span text="learn more at "/>
+                                <span text="https://aka.ms/xamarin-quickstart" fontattributes="bold"/>
+                            </formattedstring.spans>
+                        </formattedstring>
+                    </label.formattedtext>
+                </label>
+                <button margin="0,10,0,0" text="learn more"
+                        command="{binding openwebcommand}"
+                        backgroundcolor="{staticresource primary}"
+                        textcolor="white" />
+            </stacklayout>
+        </scrollview>
+    </grid>
+
+</contentpage>-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AwesomeApp.Views.AboutPage"
+             Title="About">
+    
+    <!-- Layout Children in two rows -->
+    <Grid RowDefinitions="*,*"> <!-- use "auto,*" for automatic resize fit inner content at top row-->
+        <!--<Image Source="xamarin_logo.png" BackgroundColor="{OnPlatform iOS=LightSlateGray, Android=#2196F3}" HeightRequest="64" VerticalOptions="Start">
+        </Image>-->
+        <Button Text="TETE"></Button>
+        <!--layout children vertically-->
+        <StackLayout Grid.Row="1" Margin="40" Spacing="20" BackgroundColor="Red">
+            <Label FontSize="20">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Notes" FontAttributes="Bold" FontSize="22"></Span>
+                        <Span Text=" V1.0"></Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Text="This app is written in XAML and C# with the Xamarin Platform." />
+            <Button Text="Learn more"
+                    Clicked="OnButtonClicked" />
+            <Button Text="Learn more"
+                    Clicked="OnButtonClicked" />
+        </StackLayout>
+    </Grid>
+</ContentPage>

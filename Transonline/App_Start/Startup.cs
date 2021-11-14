@@ -33,6 +33,8 @@ namespace Transonline.App_Start
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("my_secret_key_12345"))
                     }
                 });
+
+
         }
     }
 }

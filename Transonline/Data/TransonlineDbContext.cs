@@ -24,6 +24,8 @@ namespace Transonline.Data
         public DbSet<User> User { get; set; }
         public DbSet<UserRoles> UserRoles { get; set; }
 
+        public DbSet<UserRoleMapping> UserRoleMappings { get; set; }
+
         public override int SaveChanges()
         {
             AddTimestamps();

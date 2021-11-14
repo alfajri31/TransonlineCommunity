@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:AwesomeApp.ViewModels"
+             x:Class="AwesomeApp.Views.MenuPage">
+
+    <ContentPage.BindingContext>
+        <vm:MenuViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar Placeholder="Search Item"></SearchBar>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Click Me" Clicked="FungsiTombol" />
+        </StackLayout>
+    </ContentPage.Content>
+    
+    
+</ContentPage>

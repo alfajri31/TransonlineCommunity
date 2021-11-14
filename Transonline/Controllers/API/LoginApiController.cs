@@ -17,6 +17,7 @@ using System.Text;
 
 namespace Transonline.Controllers.API 
 {
+
     public class LoginApiController : ApiController
     {
         private readonly TransonlineDbContext db = new TransonlineDbContext();
@@ -54,6 +55,7 @@ namespace Transonline.Controllers.API
 
         public Object GetToken(Registration register)
         {
+
             string key = "my_secret_key_12345"; //Secret key which will be used later during validation    
             var issuer = "http://mysite.com";  //normally this will be your site URL    
 
@@ -63,7 +65,7 @@ namespace Transonline.Controllers.API
             //Create a List of Claims, Keep claims name short    
             var permClaims = new List<Claim>();
             permClaims.Add(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
-            permClaims.Add(new Claim("password", "register.Password"));
+            permClaims.Add(new Claim("password", register.Password));
             permClaims.Add(new Claim("email", register.Email));
             permClaims.Add(new Claim("username", register.Username));
 

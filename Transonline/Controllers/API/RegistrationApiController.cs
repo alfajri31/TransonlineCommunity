@@ -27,6 +27,8 @@ namespace Transonline.Controllers.API
 
         // GET: api/Registers
         [Authorize]
+        [BasicAuthentication]
+        [MyAuthorizeAttributeWebApi(Roles = "Employee")]
         public IQueryable<Registration> GetRegister()
         {
 
